@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/backToolBar"
+                android:visibility="visible"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/ic_arrow_back_48dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|start"
+                android:contentDescription="@string/back_arrow"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/backToolBar"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:text="@string/note_view"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:layout_height="wrap_content"
+                tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+
+            <ImageView
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/editNotesIV"
+                android:layout_width="wrap_content"
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_toLeftOf="@+id/deleteNotesIV"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/deleteicon"
+                tools:ignore="RtlCompat,RtlHardcoded" />
+
+
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/deleteNotesIV"
+                android:layout_width="wrap_content"
+                android:src="@android:drawable/ic_menu_delete"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/deleteicon"
+                tools:ignore="RtlHardcoded" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/noteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/createdAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Medium Text" />
+
+    <view
+        android:id="@+id/noteContent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.example.devendranagar.halonotepad.LineTextView"
+        android:background="@android:color/transparent"
+        android:fadingEdge="vertical"
+        android:gravity="top"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:textSize="15sp" />
+
+</LinearLayout>
